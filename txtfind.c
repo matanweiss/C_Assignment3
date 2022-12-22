@@ -42,7 +42,6 @@ void a(char *line, char *word)
 void b(char *line, char *word)
 {
     int length = strlen(word);
-    int lineWordLength = 0;
     for (char *p = strtok(line, " "); p != NULL; p = strtok(NULL, " "))
     {
         int isRemovedLetter = 0;
@@ -95,4 +94,5 @@ int main()
             }
         }
     }
+    printf("\n");
 }

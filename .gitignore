@@ -3,3 +3,7 @@ isort
 txtfind
 input.txt
 numbers.txt
+inputs/
+outputs/
+check_submition.py
+hw3.txt
