@@ -50,6 +50,5 @@ int main()
     }
     insertion_sort(arr, SIZE);
     printArr(arr, SIZE);
-    printf("\n\n");
     return 0;
 }
