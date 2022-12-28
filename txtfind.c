@@ -73,7 +73,6 @@ void b(char *line, char *word)
         }
         if (length == count && (*linePtr == 0 || isRemovedLetter == 0))
         {
-            fixRN(line);
             p[strcspn(p, "\n")] = 0;
             puts(p);
         }
