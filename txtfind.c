@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #define LINE 256
 #define WORD 30
 
@@ -82,7 +83,7 @@ void b(char *line, char *word)
 int main()
 {
     char *line = NULL;
-    size_t size;
+    size_t size = 0;
     int firstLine = 1;
     char func = '\0';
     char word[WORD] = {0};
@@ -105,4 +106,5 @@ int main()
             }
         }
     }
+    free(line);
 }
