@@ -15,6 +15,16 @@ void setWordAndFunc(char *line, char *word, char *func)
     *func = *(currLetter + 1);
 }
 
+void fixRN(char *line)
+{
+    int index = strcspn(line, "\r\n");
+    if (index)
+    {
+        line[index] = '\n';
+        line[index + 1] = 0;
+    }
+}
+
 void a(char *line, char *word)
 {
     int length = strlen(word);
@@ -31,6 +41,7 @@ void a(char *line, char *word)
         }
         if (count == length)
         {
+            fixRN(line);
             printf("%s", line);
             return;
         }
@@ -62,6 +73,7 @@ void b(char *line, char *word)
         }
         if (length == count && (*linePtr == 0 || isRemovedLetter == 0))
         {
+            fixRN(line);
             p[strcspn(p, "\n")] = 0;
             puts(p);
         }
